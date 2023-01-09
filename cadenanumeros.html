@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width">
+        <link rel="stylesheet" href="reset2.css">
+        <link rel="stylesheet" href="cadena.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <title>Numeros aleatorios</title>
+    </head>
+
+    <header>
+        <h1>Sorteo Numeros</h1>
+    </header>
+    <body>
+        <button>Sortear numero</button>
+    </body>
+    <script>
+        function organizar(x){
+            while(x > 7 || x ==1 || x == 0){
+                x = Math.round(Math.random()*10);
+            }
+            return x;
+        }
+
+        function numeroAleatorio(){
+            var x = organizar(Math.round(Math.random()*10))
+            return x;
+        }
+        var secreto1 = numeroAleatorio();
+        var secreto2 = numeroAleatorio();
+        var secreto3 = 2;
+        var secreto4 = numeroAleatorio();
+        var secreto5 = numeroAleatorio();
+        var secreto6 = numeroAleatorio();
+        
+        function verificar(){
+            alert ("los numeros sorteados son: "+secreto1+","+secreto2+","+secreto3+","+secreto4+","+secreto5+","+secreto6)
+            }
+        var button = document.querySelector("button");
+        button.onclick = verificar;
+    </script>
+    </html>
